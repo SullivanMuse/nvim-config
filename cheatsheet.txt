@@ -1,12 +1,15 @@
-0	Go to beginning of line
-^	Go to beginning of line excluding whitespace
-_	Like ^, but supports a count
-$	Go to end of line
--	Go to first non-whitespace character on previous line
-+	Go to first non-whitespace character on next line
+0           Go to beginning of line
+^           Go to beginning of line excluding whitespace
+_           Like ^, but supports a count
+$           Go to end of line
+-           Go to first non-whitespace character on previous line
++           Go to first non-whitespace character on next line
 
-hjkl	Move cursor
-C-u     Up one page
-C-d     Down one page
+hjkl        Move cursor
+C-u         Up one page
+C-d         Down one page
+C-w v       Split vertical
+C-w s       Split horizontal
+C-w q       Close pane
 
 <space>gc   Go to URL under cursor
