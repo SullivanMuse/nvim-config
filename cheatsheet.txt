@@ -12,4 +12,4 @@ C-w v       Split vertical
 C-w s       Split horizontal
 C-w q       Close pane
 
-<space>gc   Go to URL under cursor
+<space>gx   Go to URL under cursor
