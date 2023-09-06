@@ -292,6 +292,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Make home go to first non-whitespace character while in insert mode
 vim.keymap.set('i', '<home>', '<esc>^i')
 
+-- Open netrw really easily
+vim.keymap.set('n', '<leader>x', ':Ex<CR>')
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
