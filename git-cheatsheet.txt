@@ -1,0 +1,21 @@
+Remove unstaged file changes    git remove *
+Interactively add hunks         git add -p
+
+gad() {
+    git add "$@"
+    git diff --staged
+}
+
+gadc() {
+    gad "$@"
+    read -p 'Commit these changes (Y/n)? ' input
+    if [ "$input" == "y" ] ||
+       [ "$input" == "Y" ] ||
+       [ ! "$input" ]
+    then
+        git commit
+    else
+        echo 'Aborting commit'
+    fi
+}
+
