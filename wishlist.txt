@@ -1,0 +1,5 @@
+autosave
+autoformat on save
+automatically insert final newline
+show whitespace characters
+
