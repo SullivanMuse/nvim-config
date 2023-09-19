@@ -293,7 +293,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('i', '<home>', '<esc>^i')
 
 -- Open netrw really easily
-vim.keymap.set('n', '<leader>x', ':Ex<CR>')
+vim.keymap.set('n', '<leader>xx', ':Ex<CR>')
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -340,6 +340,9 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sb', require('telescope.builtin').buffers, { desc = '[S]earch [B]uffers' })
+
+vim.keymap.set('n', '<leader>eb', function() vim.cmd.e('~/.bashrc') end, { desc = '[E]dit ~/.[b]ashrc' })
+vim.keymap.set('n', '<leader>xn', function() vim.cmd.ex('~/.config/nvim/') end, { desc = '[E]xplore ~/.config/[n]vim' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -480,6 +483,8 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+
+  pyright = {},
 }
 
 -- Setup neovim lua configuration
